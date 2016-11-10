@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "practice:practiceBlock2"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

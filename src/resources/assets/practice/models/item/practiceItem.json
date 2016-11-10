@@ -1,0 +1,6 @@
+{
+    "parent":"practice:item/standard_item3",
+    "textures": {
+        "layer0":"practice:items/practiceItem2"
+    }
+}
