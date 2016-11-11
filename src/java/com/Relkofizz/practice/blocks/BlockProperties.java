@@ -13,10 +13,9 @@ import net.minecraft.util.IStringSerializable;
 
 import java.util.List;
 
-import com.Relkofizz.practice.blocks.EnumType;
 public class BlockProperties extends Block {
 
-	public enum PracticeEnum implements IStringSerializable{
+	public enum PracticeEnum implements IStringSerializable {
 		WHITE(0, "white"), BLACK(1, "black");
 
 		private int ID;
@@ -42,34 +41,33 @@ public class BlockProperties extends Block {
 		}
 	}
 
-	
-
-	@SuppressWarnings("unchecked")
 	public BlockProperties(String unlocalizedName, Material material, float hardness, float resistance) {
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 		this.setHardness(hardness);
 		this.setResistance(resistance);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumType.WHITE));
+		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, PracticeEnum.WHITE));
 	}
+	
 	@Override
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
 	    list.add(new ItemStack(itemIn, 1, 0)); //Meta 0
 	    list.add(new ItemStack(itemIn, 1, 1)); //Meta 1
 	}
+	
 	@Override
 	public int damageDropped(IBlockState state) {
 	    return getMetaFromState(state);
 	}
-	 protected BlockStateContainer  blockStateContainer() { 
+	
+	protected BlockStateContainer blockStateContainer() { 
 		  	return new
 		BlockStateContainer(this, new IProperty[] { TYPE  }); 
 	}
-@SuppressWarnings("rawtypes")
-public static final PropertyEnum TYPE = PropertyEnum.create("type",PracticeEnum.class);
 
-	 
-	}
+	public static final PropertyEnum<PracticeEnum> TYPE = PropertyEnum.create("type",PracticeEnum.class);
+
+}
 
 

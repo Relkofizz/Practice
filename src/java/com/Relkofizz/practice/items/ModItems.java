@@ -8,8 +8,12 @@ public final class ModItems {
 	public static Item practiceItem;
 	
 	public static void createItems() {
-		//Item practiceItem = practiceItem.setRegistryName("practiceItem");
-		GameRegistry.registerItem(practiceItem = new BasicItem("Item of Practice"),"practiceItem");
-		//GameRegistry.register(practiceItem);
+		practiceItem = new BasicItem("practiceItem");
+		regItem(practiceItem);
+	}
+	
+	public static void regItem(Item item) {
+		item.setUnlocalizedName(item.getRegistryName().toString());
+		GameRegistry.register(item);
 	}
 }

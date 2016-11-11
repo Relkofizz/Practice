@@ -6,18 +6,19 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BasicBlock extends Block{
 
-	  public BasicBlock(String unlocalizedName, Material material, float hardness, float resistance) {
+	  public BasicBlock(String regName, Material material, float hardness, float resistance) {
 	        super(material);
-	        this.setUnlocalizedName(unlocalizedName);
+	        this.setRegistryName(regName);
 	        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 	        this.setHardness(hardness);
 	        this.setResistance(resistance);
-	    }
-	  public BasicBlock(String unlocalizedName, float hardness, float resistance) {
-	       this(unlocalizedName, Material.ROCK, hardness, resistance);
-	    }
+	  }
+	  
+	  public BasicBlock(String regName, float hardness, float resistance) {
+	       this(regName, Material.ROCK, hardness, resistance);
+	  }
 
-	  public BasicBlock(String unlocalizedName) {
-	      this(unlocalizedName, 2.0f, 10.0f);
+	  public BasicBlock(String regName) {
+	      this(regName, 2.0f, 10.0f);
 	  }
 }

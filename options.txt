@@ -18,7 +18,7 @@ renderClouds:false
 resourcePacks:[]
 incompatibleResourcePacks:[]
 lastServer:
-lang:en_US
+lang:en_CA
 chatVisibility:0
 chatColors:true
 chatLinks:true
@@ -45,7 +45,7 @@ forceUnicodeFont:false
 reducedDebugInfo:false
 useNativeTransport:true
 entityShadows:true
-mainHand:right
+mainHand:left
 attackIndicator:1
 showSubtitles:false
 realmsNotifications:true

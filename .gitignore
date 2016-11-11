@@ -1,2 +1,12 @@
 /.gradle/
+/.settings/
+/.project
 /bin/
+/crash-reports/
+/logs/
+/mods/
+/saves/
+/resourcepacks/
+/options.txt
+/usercache.json
+/usernamecache.json
