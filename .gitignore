@@ -1,5 +1,4 @@
 .gradle/
-.settings/
 .project
 bin/
 crash-reports/
