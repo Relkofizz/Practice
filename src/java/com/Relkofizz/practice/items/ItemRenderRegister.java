@@ -14,6 +14,7 @@ public final class ItemRenderRegister {
 
 	public static void registerItemRenderer() {
 		reg(ModItems.practiceItem);
+		reg(ModItems.practiceSword);
 	}
 	
 	public static void reg(Item item) {

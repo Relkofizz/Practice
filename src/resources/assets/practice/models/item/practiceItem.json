@@ -1,5 +1,5 @@
 {
-    "parent":"practice:item/standard_item3",
+    "parent":"item/generated",
     "textures": {
         "layer0":"practice:items/practiceItem2"
     }
