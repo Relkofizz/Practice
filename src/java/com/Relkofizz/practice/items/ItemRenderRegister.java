@@ -15,6 +15,11 @@ public final class ItemRenderRegister {
 	public static void registerItemRenderer() {
 		reg(ModItems.practiceItem);
 		reg(ModItems.practiceSword);
+		reg(ModItems.practiceHelmet);
+		reg(ModItems.practiceChestplate);
+		reg(ModItems.practiceLeggings);
+		reg(ModItems.practiceBoots);
+
 	}
 	
 	public static void reg(Item item) {

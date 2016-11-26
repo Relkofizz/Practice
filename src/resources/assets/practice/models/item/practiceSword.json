@@ -1,6 +1,6 @@
 {
     "parent":"item/handheld",
     "textures": {
-        "layer0":"practice:items/practiceCrop"
+        "layer0":"practice:items/practiceSword"
     }
 }
