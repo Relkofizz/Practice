@@ -10,3 +10,10 @@ resourcepacks/
 options.txt
 usercache.json
 usernamecache.json
+banned-ips.json
+banned-players.json
+eula.txt
+ops.json
+server.properties
+whitelist.json
+world/
