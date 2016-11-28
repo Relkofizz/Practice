@@ -7,7 +7,6 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 
-
 public final class ItemRenderRegister {
 
 	public static String modid = Main.MODID;
@@ -19,12 +18,14 @@ public final class ItemRenderRegister {
 		reg(ModItems.practiceChestplate);
 		reg(ModItems.practiceLeggings);
 		reg(ModItems.practiceBoots);
+		reg(ModItems.bionicEye);
+	}
 
-	}
-	
 	public static void reg(Item item) {
-		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(item, 0,
+				new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
+
 	
+
 }
- 

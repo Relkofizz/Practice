@@ -11,11 +11,13 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent e) {
-	    ModItems.createItems();
+	    System.out.println("PracticeMod preinit started");
+		ModItems.createItems();
 	    ModBlocks.createBlocks();
     }
 	
 	public void init(FMLInitializationEvent e) {
+	    System.out.println("PracticeMod init started");
 		ModCrafting.initRecipes();
     }
 

@@ -10,28 +10,40 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public final class ModItems {
 
-    public static final Item.ToolMaterial practiceToolMat = EnumHelper.addToolMaterial("PRACTICE", 7, 999, 7, 7, 100);
-	public static final ItemArmor.ArmorMaterial practiceArmorMat = EnumHelper.addArmorMaterial("PRACTICE", "practice" + ":practice", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-    public static Item practiceItem;
+    public static final Item.ToolMaterial 		practiceToolMat 	= EnumHelper.addToolMaterial ("PRACTICE", 7, 999, 7, 7, 100);
+	public static final ItemArmor.ArmorMaterial practiceArmorMat	= EnumHelper.addArmorMaterial("PRACTICE", "practice"	+ ":practice", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	public static final ItemArmor.ArmorMaterial bionicArmorMat		= EnumHelper.addArmorMaterial("PRACTICE2", "practice2"	+ ":practice2", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+
+	public static Item		practiceItem;
 	public static ItemSword practiceSword;
 	public static ItemArmor practiceHelmet;
 	public static ItemArmor practiceChestplate;
 	public static ItemArmor practiceLeggings;
 	public static ItemArmor practiceBoots;
+	public static BionicEye bionicEye;
+
+	public static BionicEyeRender bionicEyeRender;
 
 	public static void createItems() {
+	    System.out.println("Creating items");
+
 		practiceHelmet 		= new com.Relkofizz.practice.items.ItemArmor(practiceArmorMat, EntityEquipmentSlot.HEAD, "practiceHelmet");
 		practiceChestplate	= new com.Relkofizz.practice.items.ItemArmor(practiceArmorMat, EntityEquipmentSlot.CHEST, "practiceChestplate");
 		practiceLeggings	= new com.Relkofizz.practice.items.ItemArmor(practiceArmorMat, EntityEquipmentSlot.LEGS, "practiceLeggings");
 		practiceBoots 		= new com.Relkofizz.practice.items.ItemArmor(practiceArmorMat, EntityEquipmentSlot.FEET, "practiceBoots");
 		practiceItem 		= new BasicItem("practiceItem");
 		practiceSword 		= new ItemSword(practiceToolMat, "practiceSword");
+		bionicEyeRender 	= new BionicEyeRender(1.0f);
+		bionicEye 			= new BionicEye(practiceArmorMat);
+	    System.out.println("Registering Items");
 		regItem(practiceItem);
 		regItem(practiceSword);
 		regItem(practiceHelmet);
 		regItem(practiceChestplate);
 		regItem(practiceLeggings);
 		regItem(practiceBoots);
+		regItem(bionicEye);
+		
 
 	}
 	
